@@ -27,6 +27,8 @@ app.get('/getArtistsAndNames', (req, res) => {
 });
 
 // Start the server
-app.listen(port, () => {
-  console.log(`Backend is running at http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Backend is running at http://localhost:${port}`);
+// });
+
+module.exports = app;
