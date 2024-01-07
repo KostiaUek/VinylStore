@@ -13,7 +13,7 @@ const functions = {
 
 
 // Test message
-app.get("/api/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Express on Vercel");
 });
 
