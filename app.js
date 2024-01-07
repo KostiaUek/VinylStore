@@ -13,13 +13,13 @@ const functions = {
 
 
 // Test message
-app.get("/", (req, res) => {
+app.get("/api/", (req, res) => {
   res.send("Express on Vercel");
 });
 
 // app.use(cors());
 // Example: http://localhost:1111/getimage?author=<AUTHOR_NAME_HERE>&track=<TRACK_NAME_HERE>
-app.get('/getimage', (req, res) => {
+app.get('/api/getimage', (req, res) => {
   const author = req.query.author;
   const track = req.query.track;
   
@@ -27,7 +27,7 @@ app.get('/getimage', (req, res) => {
   Promise.resolve(functions.getImage(author, track)).then((result)=> res.send(result));
 });
 
-app.get('/getArtistsAndNames', (req, res) => {
+app.get('/api/getArtistsAndNames', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   Promise.resolve(functions.getArtistsAndNames()).then((result)=> res.send(result));
 });
