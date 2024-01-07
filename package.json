@@ -4,7 +4,7 @@
   "description": "",
   "main": "./pages/api/index.js",
   "scripts": {
-    "start": "nodemon backend/server.js",
+    "start": "node pages/api/index.js",
     "serve": "nodemon backend/server.js"
   },
   "author": "",
