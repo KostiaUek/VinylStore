@@ -1,9 +1,9 @@
 const express = require('express');
 // const cors = require('cors');
-const trackApi = require('./track/track.js')
-const mockarooApi = require("./mockaroo/mockaroo.js")
+const trackApi = require('./api/track/track.js')
+const mockarooApi = require("./api/mockaroo/mockaroo.js")
 const app = express();
-const port = 1111;
+const port = 4528;
 
 // Defining functions
 const functions = {
