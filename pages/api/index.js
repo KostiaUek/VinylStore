@@ -11,6 +11,12 @@ const functions = {
   getArtistsAndNames: () => mockarooApi.getArtistsAndTracksList(),
 };
 
+
+// Test message
+app.get("/api/", (req, res) => {
+  res.send("Express on Vercel");
+});
+
 // app.use(cors());
 // Example: http://localhost:1111/getimage?author=<AUTHOR_NAME_HERE>&track=<TRACK_NAME_HERE>
 app.get('/api/getimage', (req, res) => {
@@ -27,8 +33,8 @@ app.get('/api/getArtistsAndNames', (req, res) => {
 });
 
 // Start the server
-// app.listen(port, () => {
-//   console.log(`Backend is running at http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Backend is running at http://localhost:${port}`);
+});
 
 module.exports = app;
