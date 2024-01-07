@@ -1,7 +1,7 @@
 const express = require('express');
 // const cors = require('cors');
-const trackApi = require('./track/track.js')
-const mockarooApi = require("./mockaroo/mockaroo.js")
+const trackApi = require('./api/track/track.js')
+const mockarooApi = require("./api/mockaroo/mockaroo.js")
 const app = express();
 const port = 4528;
 
@@ -13,13 +13,13 @@ const functions = {
 
 
 // Test message
-app.get("/api", (req, res) => {
+app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
 
 // app.use(cors());
 // Example: http://localhost:1111/getimage?author=<AUTHOR_NAME_HERE>&track=<TRACK_NAME_HERE>
-app.get('/api/getimage', (req, res) => {
+app.get('/getimage', (req, res) => {
   const author = req.query.author;
   const track = req.query.track;
   
@@ -27,7 +27,7 @@ app.get('/api/getimage', (req, res) => {
   Promise.resolve(functions.getImage(author, track)).then((result)=> res.send(result));
 });
 
-app.get('/api/getArtistsAndNames', (req, res) => {
+app.get('/getArtistsAndNames', (req, res) => {
   res.header("Access-Control-Allow-Origin", "*");
   Promise.resolve(functions.getArtistsAndNames()).then((result)=> res.send(result));
 });
