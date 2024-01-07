@@ -2,7 +2,7 @@
   "name": "vinylstore",
   "version": "1.0.0",
   "description": "",
-  "main": "./backend/server.js",
+  "main": "./pages/api/index.js",
   "scripts": {
     "start": "nodemon backend/server.js",
     "serve": "nodemon backend/server.js"
