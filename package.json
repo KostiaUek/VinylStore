@@ -2,9 +2,9 @@
   "name": "vinylstore",
   "version": "1.0.0",
   "description": "",
-  "main": "pages/api/app.js",
+  "main": "pages/api/index.js",
   "scripts": {
-    "start": "node pages/api/app.js",
+    "start": "node pages/api/index.js",
     "serve": "nodemon backend/server.js"
   },
   "author": "",
